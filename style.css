@@ -1,0 +1,103 @@
+@font-face {
+  font-family: myFont;
+  src: url(QuiteMagicalRegular-8VA2.ttf);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: myFont;
+}
+
+h1 {
+  font-size: 3.5rem;
+  padding: 3.75rem 0 3.75rem 5rem;
+}
+
+h1 a {
+  color: black;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+h1 a:hover {
+  color: #018127;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  border-top: 1px solid black;
+  padding-top: 2rem;
+}
+
+main .card {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+main .card:nth-of-type(1) {
+  background: #c6eec8;
+}
+
+main .card:nth-of-type(2) {
+  background: #d1ffdb;
+}
+
+main .card:nth-of-type(3) {
+  background: #a4e2a9;
+}
+
+main .card:nth-of-type(4) {
+  background: #a3ffb7;
+}
+
+main .card:nth-of-type(5) {
+  background: #9bf8c9;
+}
+
+main .card:nth-of-type(6) {
+  background: #a0f088;
+}
+
+main .card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+main .card .info {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+main .card .info span {
+  font-size: 2.2rem;
+}
+
+main .card .info p {
+  padding-left: 0.5rem;
+  padding-top: 0.2rem;
+}
+
+main .card img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*# sourceMappingURL=style.css.map */

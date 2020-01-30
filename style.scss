@@ -1,0 +1,78 @@
+$colors: rgb(198, 238, 200), rgb(209, 255, 219), rgb(164, 226, 169), rgb(163, 255, 183), rgb(155, 248, 201), rgb(160, 240, 136), ;
+
+@font-face {
+    font-family: myFont;
+    src: url(QuiteMagicalRegular-8VA2.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    font-family: myFont;
+}
+
+h1 {
+    font-size: 3.5rem;
+    padding: 3.75rem 0 3.75rem 5rem;
+
+    a {
+        color: black;
+        text-decoration: none;
+        transition: all 0.2s;
+
+        &:hover {
+            color: rgb(1, 129, 39);
+        }
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    border-top: 1px solid black;
+    padding-top: 2rem;
+
+    .card {
+        transition: transform 0.3s;
+
+        @for $i from 1 through 6 {
+            &:nth-of-type(#{$i}) {
+                background: nth($colors, $i);
+            }
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+
+        .info {
+            font-size: 1.5rem;
+            padding: 1rem;
+
+            span {
+                font-size: 2.2rem;
+            }
+
+            p {
+                padding-left: 0.5rem;
+                padding-top: 0.2rem;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
